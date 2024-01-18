@@ -1,10 +1,10 @@
 package com.example.examendanidiaz.UI
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.examendanidiaz.R
@@ -21,16 +21,16 @@ class CreateFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding= FragmentCreateBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this).get(CreateViewModel::class.java)
+        viewModel = ViewModelProvider(this)[CreateViewModel::class.java]
 
         binding.button.setOnClickListener {
 
             val name = binding.editTextName.text.toString()
             val group = binding.editTextGroup.text.toString()
-            val grade = binding.editTextName.text.toString().toInt()
+            val grade = binding.editTextGrade.text.toString().toInt()
 
             viewModel.newStudient(requireContext(), name, group,grade)
-            Navigation.findNavController(it).navigate(R.id.action_createFragment_to_viewFragment)
+          Navigation.findNavController(it).navigate(R.id.action_createFragment_to_viewFragment)
         }
 
 

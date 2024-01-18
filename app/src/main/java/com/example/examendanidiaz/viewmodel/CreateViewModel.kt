@@ -9,8 +9,8 @@ class CreateViewModel : ViewModel() {
 
     fun newStudient(context: Context, name:String,group:String, grade:Int) {
 
-        var alumne = Alumnes(name,group,grade)
-        Repositori.insertMoble(context,alumne)
+        val alumne = Alumnes(name,group,grade)
+        Repositori.addAlumn(context,alumne)
     }
 
 }

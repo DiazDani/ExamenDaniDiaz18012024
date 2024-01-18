@@ -27,12 +27,9 @@ class AlumneAdapter(private val alumnes: List<Alumnes>, private val onItemClick:
     override fun onBindViewHolder(holder: AlumneViewHolder, position: Int) {
         val studients= alumnes[position]
 
-        holder.itemView.setOnClickListener {
-            onItemClick.invoke(studients)
-        }
         holder.nom.text=studients.Name
         holder.grup.text=studients.Group
-        holder.nota.text=studients.Grade.toString() + "€"
+        holder.nota.text=studients.Grade.toString()
     }
 
 }

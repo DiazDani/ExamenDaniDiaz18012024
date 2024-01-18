@@ -24,7 +24,7 @@ class Repositori {
         }
 
         //INSERT moble
-        fun insertMoble(context: Context, alumnes: Alumnes) {
+        fun addAlumn(context: Context, alumnes: Alumnes) {
 
             alumneDatabase = initializeDB(context)
 

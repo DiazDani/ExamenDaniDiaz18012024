@@ -1,4 +1,4 @@
-package com.example.examendanidiaz.viewmodel
+package com.example.examendanidiaz.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

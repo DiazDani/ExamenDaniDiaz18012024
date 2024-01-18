@@ -18,5 +18,9 @@
         android:id="@+id/viewFragment"
         android:name="com.example.examendanidiaz.UI.ViewFragment"
         android:label="fragment_view"
-        tools:layout="@layout/fragment_view" />
+        tools:layout="@layout/fragment_view" >
+        <action
+            android:id="@+id/action_viewFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
 </navigation>

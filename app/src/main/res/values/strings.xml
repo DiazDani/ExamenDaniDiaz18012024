@@ -5,6 +5,8 @@
     <string name="nota">Nota</string>
     <string name="add">+</string>
     <string name="group">Group</string>
+    <string name="failed">Failed</string>
+    <string name="approved">Approved</string>
     <string-array name="Options">
         <item>All</item>
         <item>Failed</item>
