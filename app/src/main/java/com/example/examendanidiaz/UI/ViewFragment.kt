@@ -47,14 +47,7 @@ class ViewFragment : Fragment() /*, AdapterView.OnItemSelectedListener*/{
             layoutManager = viewManager
         }
 
-       viewModel.getStudients(requireContext())?.observe(viewLifecycleOwner, Observer { moblesLlistat ->
-           moblesLlistat?.let {
-               viewAdapter = AlumneAdapter(it) { selectedItem ->
-                   sharedViewModel.setSelectedItem(selectedItem)
-               }
-               recyclerView.adapter = viewAdapter
-           }
-       })
+
 
      val switch=  binding.switch1
 
@@ -82,8 +75,14 @@ class ViewFragment : Fragment() /*, AdapterView.OnItemSelectedListener*/{
         }
 
         binding.button2.setOnClickListener{
-            Navigation.findNavController(it).navigate(R.id.action_viewFragment_to_createFragment)
-
+            viewModel.getStudients(requireContext())?.observe(viewLifecycleOwner, Observer { moblesLlistat ->
+                moblesLlistat?.let {
+                    viewAdapter = AlumneAdapter(it) { selectedItem ->
+                        sharedViewModel.setSelectedItem(selectedItem)
+                    }
+                    recyclerView.adapter = viewAdapter
+                }
+            })
         }
 
 
